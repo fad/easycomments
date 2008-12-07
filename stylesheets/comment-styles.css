@@ -1,0 +1,9 @@
+.comment .author{
+	color:red;
+}
+.comment .author a{
+	color:Green;
+}
+.comment .body{
+	padding:5px;
+}

@@ -1,0 +1,39 @@
+<div class='comment'>
+	<div class='author'>Frank</div>
+	<div class='body'>Das ist ein Kommentar.
+
+</div>
+</div>
+
+<div class='comment'>
+	<div class='author'><a href='http://tolle-webseite.de' target='_blank'>Xtina</a></div>
+	<div class='body'>Voll toll!
+</div>
+</div>
+<div class='comment'>
+	<div class='author'><a href='http://tolle-webseite.de' target='_blank'>Xtina</a></div>
+	<div class='body'>Und das mit der Webseite tut auch :)
+
+</div>
+</div>
+
+<div class='comment'>
+	<div class='author'>test</div>
+	<div class='body'>sadsad</div>
+</div>
+
+<div class='comment'>
+	<div class='author'><a href='http://bnnb' target='_blank'>sd</a></div>
+	<div class='body'>bnb</div>
+</div>
+
+<div class='comment'>
+	<div class='author'>andrej</div>
+	<div class='body'>bllllllll o sole mio</div>
+</div>
+
+<div class='comment'>
+	<div class='author'>ss</div>
+	<div class='body'>ssss</div>
+</div>
+
