@@ -1,9 +1,10 @@
 (function($){ 
 	
-$.fn.easycomments = function(options) {
-	$('<h2>Kommentare:</h2>').appendTo(this);
+$.fn.easycomments = function(options) {	
 	$('<div id="ec_commentList" />').appendTo(this);
-	$('#ec_commentList').load('comments.txt');
+	$('<h2>Kommentare:</h2>').appendTo('#ec_commentList');
+	$('<div id="ec_commentList_innerDiv" />').appendTo('#ec_commentList');
+	$('#ec_commentList_innerDiv').load('comments.txt');
 	
 	var commentFormHTML = 
 	'<h2>Neuer Kommentar</h2>'
@@ -34,7 +35,7 @@ function submitComment(author, website, comment){
 }
 
 function updateCommentDiv(htmlForNewComment){
-	$("#ec_commentList").append(htmlForNewComment);
+	$("#ec_commentList_innerDiv").append(htmlForNewComment);
 }
 
 })(jQuery);

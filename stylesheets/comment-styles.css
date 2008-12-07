@@ -1,9 +1,35 @@
-.comment .author{
-	color:red;
+#ec_commentList
+{
+	width:620px;
+	background-color:#EEE;
+	padding:10px;
 }
-.comment .author a{
-	color:Green;
+
+#ec_commentList h2
+{
+	padding-left: 10px;
 }
-.comment .body{
+
+.comment .author
+{
 	padding:5px;
+	color:black;
+	font-weight:bold;
+}
+
+.comment .author a
+{
+	color:black;
+}
+
+.comment .body
+{
+	padding:5px;
+}
+
+.comment
+{
+	width:600px;
+	background-color:#DCDCDC;
+	margin: 0px 0px 20px 10px;
 }

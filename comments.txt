@@ -42,3 +42,12 @@ asdasd</div>
 	<div class='body'>dsad</div>
 </div>
 
+<div class='comment'>
+	<div class='author'><a href='http://dsfdsf' target='_blank'>sdfsdf</a></div>
+	<div class='body'>sdfds sdf sdf ds
+
+
+
+
+sdfsdf</div>
+</div>
