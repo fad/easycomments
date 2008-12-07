@@ -16,59 +16,29 @@
 
 </div>
 </div>
-
 <div class='comment'>
-	<div class='author'>test</div>
-	<div class='body'>sadsad</div>
+	<div class='author'>fasd</div>
+	<div class='body'>asdasd
+
+
+asdasd</div>
 </div>
 
 <div class='comment'>
-	<div class='author'><a href='http://bnnb' target='_blank'>sd</a></div>
-	<div class='body'>bnb</div>
+	<div class='author'>fasd</div>
+	<div class='body'>asdasd
+
+
+asdasd</div>
 </div>
 
 <div class='comment'>
-	<div class='author'>andrej</div>
-	<div class='body'>bllllllll o sole mio</div>
+	<div class='author'><a href='http://sda' target='_blank'>asdfghj</a></div>
+	<div class='body'>dsadas</div>
 </div>
 
 <div class='comment'>
-	<div class='author'>ss</div>
-	<div class='body'>ssss</div>
-</div>
-
-<div class='comment'>
-	<div class='author'>sdfsdsdf</div>
-	<div class='body'>sdfdsf</div>
-</div>
-
-<div class='comment'>
-	<div class='author'><a href='http://asd' target='_blank'>asd</a></div>
-	<div class='body'>asd</div>
-</div>
-
-<div class='comment'>
-	<div class='author'>s</div>
-	<div class='body'>s</div>
-</div>
-
-<div class='comment'>
-	<div class='author'>dsf</div>
-	<div class='body'>sdf</div>
-</div>
-
-<div class='comment'>
-	<div class='author'><a href='http://sdffsd' target='_blank'>sdf</a></div>
-	<div class='body'>nnnnnnnnnnnnnnnn</div>
-</div>
-
-<div class='comment'>
-	<div class='author'>fad</div>
-	<div class='body'>yummi</div>
-</div>
-
-<div class='comment'>
-	<div class='author'>as</div>
-	<div class='body'>assa</div>
+	<div class='author'><a href='http://gb' target='_blank'>dsf</a></div>
+	<div class='body'>dsad</div>
 </div>
 
