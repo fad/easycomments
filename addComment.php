@@ -17,7 +17,8 @@ function addComment($author,$website,$comment){
 		$authorDiv = "\t<div class='author'>$author</div>\n";
 	else
 		$authorDiv = "\t<div class='author'><a href='".getValidURL($website)."' target='_blank'>$author</a></div>\n";
-
+	
+	$comment = str_replace("\n","<br/>",$comment);
 	$bodyDiv = "\t<div class='body'>$comment</div>\n";
 	$stringData = "<div class='comment'>\n".$authorDiv.$bodyDiv."</div>\n\n";
 

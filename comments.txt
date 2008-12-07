@@ -16,38 +16,9 @@
 
 </div>
 </div>
-<div class='comment'>
-	<div class='author'>fasd</div>
-	<div class='body'>asdasd
-
-
-asdasd</div>
-</div>
 
 <div class='comment'>
-	<div class='author'>fasd</div>
-	<div class='body'>asdasd
-
-
-asdasd</div>
+	<div class='author'>cyxc</div>
+	<div class='body'>1 jetzt mit<br/>2<br/>3 umbruechen</div>
 </div>
 
-<div class='comment'>
-	<div class='author'><a href='http://sda' target='_blank'>asdfghj</a></div>
-	<div class='body'>dsadas</div>
-</div>
-
-<div class='comment'>
-	<div class='author'><a href='http://gb' target='_blank'>dsf</a></div>
-	<div class='body'>dsad</div>
-</div>
-
-<div class='comment'>
-	<div class='author'><a href='http://dsfdsf' target='_blank'>sdfsdf</a></div>
-	<div class='body'>sdfds sdf sdf ds
-
-
-
-
-sdfsdf</div>
-</div>
