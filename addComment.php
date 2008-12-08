@@ -4,6 +4,7 @@ $author = htmlentities($_POST["author"]);
 $comment = htmlentities($_POST["comment"]);
 $website = htmlentities($_POST["website"]);
 $htmlForNewComment = addComment($author,$website,$comment);
+sleep(5);
 echo $htmlForNewComment;
 
 function addComment($author,$website,$comment){

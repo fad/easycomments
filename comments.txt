@@ -28,3 +28,8 @@
 	<p class='body'>fffff</p>
 </li>
 
+<li class='comment'>
+	<p class='author'>asd</p>
+	<p class='body'>dd</p>
+</li>
+
