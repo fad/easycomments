@@ -22,3 +22,8 @@
 	<div class='body'>1 jetzt mit<br/>2<br/>3 umbruechen</div>
 </div>
 
+<div class='comment'>
+	<div class='author'>cyxc</div>
+	<div class='body'>&Atilde;&frac14;&Atilde;&frac14;&Atilde;&frac14;&Atilde;&frac14;</div>
+</div>
+
