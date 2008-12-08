@@ -1,0 +1,16 @@
+-i18n
+-loading animation
+-validation
+-configuration
+-styles for form
+-nicer styles
+-umlaute problem -> urlencode, utf8?
+-error message for no write permission
+-asp.net version of addComment.php
+-comments as li's
+
+pro version:
+-threaded comments
+-email feld
+-email me function
+-save to database instead
