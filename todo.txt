@@ -1,10 +1,11 @@
 	-comments as li's
 	-i18n
 	-error message for no write permission
+	-styles for form
+	-nicer styles
+-date and time
 -loading animation
 -nicer validation (jump to control, show message behind control)
--styles for form
--nicer styles
 -cleaner form submit?
 -umlaute problem -> urlencode, utf8?
 -asp.net version of addComment.php
@@ -14,5 +15,5 @@ pro version:
 -email field
 -email me function
 -save to database instead
--configuration
+-configuration threaded,database,email,textile/markup/..,preview
 -admin

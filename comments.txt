@@ -33,3 +33,8 @@
 	<p class='body'>dd</p>
 </li>
 
+<li class='comment'>
+	<p class='author'>as</p>
+	<p class='body'>asdasdas</p>
+</li>
+

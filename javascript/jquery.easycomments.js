@@ -33,20 +33,34 @@ $.fn.easycomments = function(options) {
 	$('<ul id="ec_commentList" />').appendTo('#ec_commentsPanel');
 	$('#ec_commentList').load('comments.txt');
 	
+	//add and hide error message panel
+	$('<div id="ec_errorMessages" style="display:none;"></div>').appendTo($("#ec_commentsPanel"));
+	
 	//add new comment form
 	var commentFormHTML = 
-	'<h1>'+str_newCommentFormHeader+'</h1>'
- 		+'<label for="comment_author">'+str_commentAuthor+'&nbsp;'+str_required+'</label><br/>'
+	'<div id="ec_newCommentForm"><h1>'+str_newCommentFormHeader+'</h1>'
+		+ '<table>'
+ 		+'<tr><td align="right"><label for="comment_author">'+str_commentAuthor+'&nbsp;'+str_required+'</label></td>'
+		+'<td><input id="comment_author" type="text"/></td></tr>'
+		+'<tr><td align="right"><label for="comment_author_website">'+str_commentAuthorWebsite+'&nbsp;'+str_notRequired+'</label></td>'
+		+'<td><input id="comment_author_website" type="text"/></td></tr>'
+		+'<tr valign="top"><td align="right"><label for="comment_body">'+str_commentBody+'&nbsp;'+str_required+'</label></td>'
+		+'<td><textarea id="comment_body" rows="10" cols="40"></textarea></td></tr>'
+		+'<tr><td></td><td><input type="button" id="ec_comment_submit" value="'+str_submitComment+'" /></td></tr>'
+		+'</table></div>';
+/*		
+	commentFormHTML = 
+	'<div id="ec_newCommentForm"><h1>'+str_newCommentFormHeader+'</h1>'
+	 		+'<label for="comment_author">'+str_commentAuthor+'&nbsp;'+str_required+'</label><br/>'
 		+'<input id="comment_author" type="text"/><br/>'
 		+'<label for="comment_author_website">'+str_commentAuthorWebsite+'&nbsp;'+str_notRequired+'</label><br/>'
 		+'<input id="comment_author_website" type="text"/><br/>'
 		+'<label for="comment_body">'+str_commentBody+'&nbsp;'+str_required+'</label><br/>'
 		+'<textarea id="comment_body" rows="10" cols="40"></textarea><br/>'
 		+'<input type="button" id="ec_comment_submit" value="'+str_submitComment+'" />'
-	$(commentFormHTML).appendTo(this);
-	
-	//add and hide error message panel
-	$('<div id="ec_errorMessages" style="display:none;"></div>').appendTo(this);
+		+'</div>;
+*/	
+	$(commentFormHTML).appendTo($("#ec_commentsPanel"));
 	
 	//add event handling for submit button click
 	$("#ec_comment_submit").click(function(){

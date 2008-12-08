@@ -1,13 +1,24 @@
+#ec_commentsPanel{
+	color:#222;
+	font-family:verdana,arial,helvetica,sans-serif;
+}
 #ec_commentList{
 	background-color:#EEE;
-	border: 2px solid #999;
+	border: 1px solid #999;
 	padding:10px;
 }
-#ec_commentList h1{
-	padding-left: 10px;
+#ec_commentsPanel h1{
+	font-size: 120%;
+	padding:0px;
+}
+.comment{
+	border: 1px solid #999;
+	list-style-type: none;
+	background-color:#DCDCDC;
+	margin-bottom:10px;
 }
 .comment .author{
-	padding:5px;
+	margin-left:5px;
 	color:black;
 	font-weight:bold;
 }
@@ -17,16 +28,14 @@
 .comment .body{
 	padding:5px;
 }
-.comment{
-	list-style-type: none;
-	background-color:#DCDCDC;
-	margin: 0px 10px 20px 10px;
-}
 #ec_errorMessages{
 	border: 1px solid #999;
-	color:RED;
 	background-color:#eee;
+	color:RED;
+	margin-bottom:20px;
 }
-#ec_errorMessages h1{
-	font-size: 100%;
+#ec_newCommentForm{
+	background-color:#EEE;
+	border: 1px solid #999;
+	padding:10px;
 }
