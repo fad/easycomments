@@ -18,3 +18,13 @@
 	<p class='body'>werwerewr</p>
 </li>
 
+<li class='comment'>
+	<p class='author'>asd</p>
+	<p class='body'>dd</p>
+</li>
+
+<li class='comment'>
+	<p class='author'>asd</p>
+	<p class='body'>fffff</p>
+</li>
+

@@ -29,6 +29,7 @@
 
 .comment
 {
+	list-style-type: none;
 	background-color:#DCDCDC;
 	margin: 0px 10px 20px 10px;
 }

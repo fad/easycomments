@@ -11,7 +11,7 @@ var str_required = "*";
 var str_notRequired = "";
 var str_errorMessagesHeader = "Fehler:";	
 var str_commentBodyMustNotBeEmpty = "Kommentar darf nicht leer sein.";
-var str_commentAutorMustNotBeEmpty = "Autor darf nicht leer sein.";
+var str_commentAuthorMustNotBeEmpty = "Autor darf nicht leer sein.";
 	
 //functions to disable and enable form elements
 $.fn.disable = function() { 
@@ -38,7 +38,7 @@ $.fn.easycomments = function(options) {
 	'<h1>'+str_newCommentFormHeader+'</h1>'
  		+'<label for="comment_author">'+str_commentAuthor+'&nbsp;'+str_required+'</label><br/>'
 		+'<input id="comment_author" type="text"/><br/>'
-		+'<label for="comment_author_website">'+str_commentAuthor+'&nbsp;'+str_notRequired+'</label><br/>'
+		+'<label for="comment_author_website">'+str_commentAuthorWebsite+'&nbsp;'+str_notRequired+'</label><br/>'
 		+'<input id="comment_author_website" type="text"/><br/>'
 		+'<label for="comment_body">'+str_commentBody+'&nbsp;'+str_required+'</label><br/>'
 		+'<textarea id="comment_body" rows="10" cols="40"></textarea><br/>'
@@ -73,9 +73,9 @@ $.fn.easycomments = function(options) {
 function validateNewCommentForm(){
 	var errorMessages = [];
 	if ($.trim($("#comment_author").val()) == "")
-		errorMessages.push();
+		errorMessages.push(str_commentAuthorMustNotBeEmpty);
 	if ($.trim($("#comment_body").val()) == "")
-		errorMessages.push();
+		errorMessages.push(str_commentBodyMustNotBeEmpty);
 	return errorMessages;
 }
 
