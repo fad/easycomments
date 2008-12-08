@@ -1,48 +1,32 @@
-#ec_commentList
-{
+#ec_commentList{
 	background-color:#EEE;
 	border: 2px solid #999;
 	padding:10px;
 }
-
-#ec_commentList h2
-{
+#ec_commentList h1{
 	padding-left: 10px;
 }
-
-.comment .author
-{
+.comment .author{
 	padding:5px;
 	color:black;
 	font-weight:bold;
 }
-
-.comment .author a
-{
+.comment .author a{
 	color:black;
 }
-
-.comment .body
-{
+.comment .body{
 	padding:5px;
 }
-
-.comment
-{
+.comment{
 	list-style-type: none;
 	background-color:#DCDCDC;
 	margin: 0px 10px 20px 10px;
 }
-
-#ec_errorMessages h1
-{
-	font-size: 100%;
-}
-
-
-#ec_errorMessages
-{
+#ec_errorMessages{
 	border: 1px solid #999;
 	color:RED;
 	background-color:#eee;
+}
+#ec_errorMessages h1{
+	font-size: 100%;
 }
