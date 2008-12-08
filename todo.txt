@@ -1,7 +1,6 @@
 -i18n
 -loading animation
--validation
--configuration
+-nicer validation (jump to control, show message behind control)
 -styles for form
 -nicer styles
 -umlaute problem -> urlencode, utf8?
@@ -10,6 +9,7 @@
 -comments as li's
 
 pro version:
+-configuration
 -threaded comments
 -email feld
 -email me function

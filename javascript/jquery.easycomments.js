@@ -1,4 +1,17 @@
 (function($){ 
+
+//localization:
+var str_commentListHeader = "Kommentare:";
+var str_newCommentFormHeader = "Kommentar hinzufügen:";	
+var str_commentAuthor = "Name";
+var str_commentAuthorWebsite = "Webseite";
+var str_commentBody = "Kommentar";
+var str_submitComment = "Abschicken";
+var str_required = "(erforderlich)";
+var str_notRequired = "(optional)";
+var str_errorMessagesHeader = "Fehler:";	
+	
+//functions to disable and enable form elements
 $.fn.disable = function() { 
   return this.each(function() { 
     if (typeof this.disabled != "undefined") this.disabled = true; 
@@ -11,14 +24,16 @@ $.fn.enable = function() {
   }); 
 }
 
+//main
 $.fn.easycomments = function(options) {	
 	$('<div id="ec_commentList" />').appendTo(this);
-	$('<h2>Kommentare:</h2>').appendTo('#ec_commentList');
+	$('<h1>Kommentare:</h1>').appendTo('#ec_commentList');
 	$('<div id="ec_commentList_innerDiv" />').appendTo('#ec_commentList');
 	$('#ec_commentList_innerDiv').load('comments.txt');
 	
+	//add new comment form
 	var commentFormHTML = 
-	'<h2>Neuer Kommentar</h2>'
+	'<h1>Neuer Kommentar</h1>'
  		+'<label for="comment_author">Name:</label><br/>'
 		+'<input id="comment_author" type="text"/><br/>'
 		+'<label for="comment_author_website">Webseite (optional):</label><br/>'
@@ -27,8 +42,11 @@ $.fn.easycomments = function(options) {
 		+'<textarea id="comment_body" rows="10" cols="40"></textarea><br/>'
 		+'<input type="button" id="ec_comment_submit" value="Abschicken" />'
 	$(commentFormHTML).appendTo(this);
+	
+	//add and hide error message panel
 	$('<div id="ec_errorMessages" style="display:none;"></div>').appendTo(this);
 	
+	//add event handling for submit button click
 	$("#ec_comment_submit").click(function(){
 		var errorMessages = validateNewCommentForm();
 		if (errorMessages.length > 0){
@@ -49,6 +67,7 @@ $.fn.easycomments = function(options) {
   	});
 };
 
+//helper functions
 function validateNewCommentForm(){
 	var errorMessages = [];
 	if ($.trim($("#comment_author").val()) == "")
