@@ -1,35 +1,20 @@
-<div class='comment'>
-	<div class='author'>asd</div>
-	<div class='body'>asdas</div>
-</div>
+<li class='comment'>
+	<p class='author'>asd</p>
+	<p class='body'>asd</p>
+</li>
 
-<div class='comment'>
-	<div class='author'>dsadsa</div>
-	<div class='body'>asdasasd<br/>asdas :)</div>
-</div>
+<li class='comment'>
+	<p class='author'>asd</p>
+	<p class='body'>adddd</p>
+</li>
 
-<div class='comment'>
-	<div class='author'>aa</div>
-	<div class='body'>aa</div>
-</div>
+<li class='comment'>
+	<p class='author'>asd</p>
+	<p class='body'>fsdfd</p>
+</li>
 
-<div class='comment'>
-	<div class='author'>asdas</div>
-	<div class='body'>asd</div>
-</div>
-
-<div class='comment'>
-	<div class='author'>dasd</div>
-	<div class='body'>sadsa</div>
-</div>
-
-<div class='comment'>
-	<div class='author'>asdsa</div>
-	<div class='body'>dsad</div>
-</div>
-
-<div class='comment'>
-	<div class='author'>asd</div>
-	<div class='body'>asdas</div>
-</div>
+<li class='comment'>
+	<p class='author'>r</p>
+	<p class='body'>werwerewr</p>
+</li>
 

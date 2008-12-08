@@ -7,9 +7,11 @@ var str_commentAuthor = "Name";
 var str_commentAuthorWebsite = "Webseite";
 var str_commentBody = "Kommentar";
 var str_submitComment = "Abschicken";
-var str_required = "(erforderlich)";
-var str_notRequired = "(optional)";
+var str_required = "*";
+var str_notRequired = "";
 var str_errorMessagesHeader = "Fehler:";	
+var str_commentBodyMustNotBeEmpty = "Kommentar darf nicht leer sein.";
+var str_commentAutorMustNotBeEmpty = "Autor darf nicht leer sein.";
 	
 //functions to disable and enable form elements
 $.fn.disable = function() { 
@@ -26,21 +28,21 @@ $.fn.enable = function() {
 
 //main
 $.fn.easycomments = function(options) {	
-	$('<div id="ec_commentList" />').appendTo(this);
-	$('<h1>Kommentare:</h1>').appendTo('#ec_commentList');
-	$('<div id="ec_commentList_innerDiv" />').appendTo('#ec_commentList');
-	$('#ec_commentList_innerDiv').load('comments.txt');
+	$('<div id="ec_commentsPanel" />').appendTo(this);
+	$('<h1>'+str_commentListHeader+'</h1>').appendTo('#ec_commentsPanel');
+	$('<ul id="ec_commentList" />').appendTo('#ec_commentsPanel');
+	$('#ec_commentList').load('comments.txt');
 	
 	//add new comment form
 	var commentFormHTML = 
-	'<h1>Neuer Kommentar</h1>'
- 		+'<label for="comment_author">Name:</label><br/>'
+	'<h1>'+str_newCommentFormHeader+'</h1>'
+ 		+'<label for="comment_author">'+str_commentAuthor+'&nbsp;'+str_required+'</label><br/>'
 		+'<input id="comment_author" type="text"/><br/>'
-		+'<label for="comment_author_website">Webseite (optional):</label><br/>'
+		+'<label for="comment_author_website">'+str_commentAuthor+'&nbsp;'+str_notRequired+'</label><br/>'
 		+'<input id="comment_author_website" type="text"/><br/>'
-		+'<label for="comment_body">Kommentar:</label><br/>'
+		+'<label for="comment_body">'+str_commentBody+'&nbsp;'+str_required+'</label><br/>'
 		+'<textarea id="comment_body" rows="10" cols="40"></textarea><br/>'
-		+'<input type="button" id="ec_comment_submit" value="Abschicken" />'
+		+'<input type="button" id="ec_comment_submit" value="'+str_submitComment+'" />'
 	$(commentFormHTML).appendTo(this);
 	
 	//add and hide error message panel
@@ -50,11 +52,11 @@ $.fn.easycomments = function(options) {
 	$("#ec_comment_submit").click(function(){
 		var errorMessages = validateNewCommentForm();
 		if (errorMessages.length > 0){
-			var errorMessagesString ="<h1>Fehler:</h1>";
+			var errorMessagesString ='<h1>'+str_errorMessagesHeader+'</h1>';
 			$.each(errorMessages,function(i,message) {
-				errorMessagesString += "<li>"+message+"</li>"; 
+				errorMessagesString += '<li>'+message+'</li>'; 
 			});  
-			$("#ec_errorMessages").html("<ul>"+errorMessagesString+"</ul>");
+			$("#ec_errorMessages").html('<ul>'+errorMessagesString+'</ul>');
 			$("#ec_errorMessages").show();
 		}
 		else{
@@ -71,9 +73,9 @@ $.fn.easycomments = function(options) {
 function validateNewCommentForm(){
 	var errorMessages = [];
 	if ($.trim($("#comment_author").val()) == "")
-		errorMessages.push("Autor darf nicht leer sein");
+		errorMessages.push();
 	if ($.trim($("#comment_body").val()) == "")
-		errorMessages.push("Kommentar darf nicht leer sein");
+		errorMessages.push();
 	return errorMessages;
 }
 
@@ -96,7 +98,7 @@ function submitComment(author, website, comment){
 }
 
 function updateCommentList(htmlForNewComment){
-	$("#ec_commentList_innerDiv").append(htmlForNewComment);
+	$("#ec_commentList").append(htmlForNewComment);
 }
 
 })(jQuery);
