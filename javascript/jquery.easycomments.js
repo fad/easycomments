@@ -24,17 +24,39 @@ $.fn.easycomments = function(options) {
 		+'<label for="comment_author_website">Webseite (optional):</label><br/>'
 		+'<input id="comment_author_website" type="text"/><br/>'
 		+'<label for="comment_body">Kommentar:</label><br/>'
-		+'<textarea id="comment_body" rows="15" cols="60"></textarea><br/>'
+		+'<textarea id="comment_body" rows="10" cols="40"></textarea><br/>'
 		+'<input type="button" id="ec_comment_submit" value="Abschicken" />'
 	$(commentFormHTML).appendTo(this);
+	$('<div id="ec_errorMessages" style="display:none;"></div>').appendTo(this);
 	
 	$("#ec_comment_submit").click(function(){
-		var author = $("#comment_author").val();
-		var website = $("#comment_author_website").val();
-		var body = $("#comment_body").val();
-		submitComment(author, website, body);
+		var errorMessages = validateNewCommentForm();
+		if (errorMessages.length > 0){
+			var errorMessagesString ="<h1>Fehler:</h1>";
+			$.each(errorMessages,function(i,message) {
+				errorMessagesString += "<li>"+message+"</li>"; 
+			});  
+			$("#ec_errorMessages").html("<ul>"+errorMessagesString+"</ul>");
+			$("#ec_errorMessages").show();
+		}
+		else{
+			$("#ec_errorMessages").hide();
+			submitComment(
+				$("#comment_author").val(), 
+				$("#comment_author_website").val(), 
+				$("#comment_body").val());
+		}
   	});
 };
+
+function validateNewCommentForm(){
+	var errorMessages = [];
+	if ($.trim($("#comment_author").val()) == "")
+		errorMessages.push("Autor darf nicht leer sein");
+	if ($.trim($("#comment_body").val()) == "")
+		errorMessages.push("Kommentar darf nicht leer sein");
+	return errorMessages;
+}
 
 function clearNewCommentForm(){
 	$("#comment_author").val("");
@@ -50,11 +72,11 @@ function submitComment(author, website, comment){
 		{ author: author, website: website, comment: comment }, 
 		function(data){ 
 			$("#ec_comment_submit").enable();
-			updateCommentDiv(data);
+			updateCommentList(data);
 		});
 }
 
-function updateCommentDiv(htmlForNewComment){
+function updateCommentList(htmlForNewComment){
 	$("#ec_commentList_innerDiv").append(htmlForNewComment);
 }
 

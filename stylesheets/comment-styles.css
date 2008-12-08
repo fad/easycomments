@@ -32,3 +32,16 @@
 	background-color:#DCDCDC;
 	margin: 0px 10px 20px 10px;
 }
+
+#ec_errorMessages h1
+{
+	font-size: 100%;
+}
+
+
+#ec_errorMessages
+{
+	border: 1px solid #999;
+	color:RED;
+	background-color:#eee;
+}
