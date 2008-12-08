@@ -1,5 +1,16 @@
 (function($){ 
-	
+$.fn.disable = function() { 
+  return this.each(function() { 
+    if (typeof this.disabled != "undefined") this.disabled = true; 
+  }); 
+} 
+
+$.fn.enable = function() { 
+  return this.each(function() { 
+    if (typeof this.disabled != "undefined") this.disabled = false; 
+  }); 
+}
+
 $.fn.easycomments = function(options) {	
 	$('<div id="ec_commentList" />').appendTo(this);
 	$('<h2>Kommentare:</h2>').appendTo('#ec_commentList');
@@ -25,11 +36,20 @@ $.fn.easycomments = function(options) {
   	});
 };
 
+function clearNewCommentForm(){
+	$("#comment_author").val("");
+	$("#comment_author_website").val("");
+	$("#comment_body").val("");
+}
+
 function submitComment(author, website, comment){
+	clearNewCommentForm();
+	$("#ec_comment_submit").disable();	
 	$.post(
 		"addComment.php", 
 		{ author: author, website: website, comment: comment }, 
 		function(data){ 
+			$("#ec_comment_submit").enable();
 			updateCommentDiv(data);
 		});
 }

@@ -1,29 +1,15 @@
 <div class='comment'>
-	<div class='author'>Frank</div>
-	<div class='body'>Das ist ein Kommentar.
-
-</div>
+	<div class='author'>asd</div>
+	<div class='body'>asdas</div>
 </div>
 
 <div class='comment'>
-	<div class='author'><a href='http://tolle-webseite.de' target='_blank'>Xtina</a></div>
-	<div class='body'>Voll toll!
-</div>
-</div>
-<div class='comment'>
-	<div class='author'><a href='http://tolle-webseite.de' target='_blank'>Xtina</a></div>
-	<div class='body'>Und das mit der Webseite tut auch :)
-
-</div>
+	<div class='author'>dsadsa</div>
+	<div class='body'>asdasasd<br/>asdas :)</div>
 </div>
 
 <div class='comment'>
-	<div class='author'>cyxc</div>
-	<div class='body'>1 jetzt mit<br/>2<br/>3 umbruechen</div>
-</div>
-
-<div class='comment'>
-	<div class='author'>cyxc</div>
-	<div class='body'>&Atilde;&frac14;&Atilde;&frac14;&Atilde;&frac14;&Atilde;&frac14;</div>
+	<div class='author'>aa</div>
+	<div class='body'>aa</div>
 </div>
 
