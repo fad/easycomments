@@ -3,8 +3,9 @@
 	-error message for no write permission
 	-styles for form
 	-nicer styles
+	-loading animation
 -date and time
--loading animation
+-multiple instances on one page
 -nicer validation (jump to control, show message behind control)
 -cleaner form submit?
 -umlaute problem -> urlencode, utf8?
