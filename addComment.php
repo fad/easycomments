@@ -4,7 +4,7 @@ $author = htmlentities($_POST["author"]);
 $comment = htmlentities($_POST["comment"]);
 $website = htmlentities($_POST["website"]);
 $htmlForNewComment = addComment($author,$website,$comment);
-sleep(5);
+sleep(1);
 echo $htmlForNewComment;
 
 function addComment($author,$website,$comment){
@@ -14,11 +14,13 @@ function addComment($author,$website,$comment){
 	$commentFile = "comments.txt";
 	$fh = fopen($commentFile, 'a') or die("ERROR: Can't open file 'coments.txt'! Make sure it's there and writable!");
 
+	$dateDiv = date("d-M-Y");
+
 	if (str_isEmpty($website))
-		$authorDiv = "\t<p class='author'>$author</p>\n";
+		$authorDiv = "\t<p class='author'>$author - $dateDiv</p>\n";
 	else
-		$authorDiv = "\t<p class='author'><a href='".getValidURL($website)."' target='_blank'>$author</a></p>\n";
-	
+		$authorDiv = "\t<p class='author'><a href='".getValidURL($website)."' target='_blank'>$author</a> - $dateDiv</p>\n";
+
 	$comment = str_replace("\n","<br/>",$comment);
 	$bodyDiv = "\t<p class='body'>$comment</p>\n";
 	$stringData = "<li class='comment'>\n".$authorDiv.$bodyDiv."</li>\n\n";

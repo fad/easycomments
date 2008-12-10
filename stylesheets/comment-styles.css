@@ -39,3 +39,8 @@
 	border: 1px solid #999;
 	padding:10px;
 }
+#ec_loader{
+	position:relative;
+	top:2px;
+	left:10px;
+}

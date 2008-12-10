@@ -17,3 +17,4 @@ pro version:
 -save to database instead
 -configuration threaded,database,email,textile/markup/..,preview
 -admin
+-gravatar integration

@@ -1,40 +1,23 @@
 <li class='comment'>
 	<p class='author'>asd</p>
 	<p class='body'>asd</p>
-</li>
-
-<li class='comment'>
+</li><li class='comment'>
 	<p class='author'>asd</p>
-	<p class='body'>adddd</p>
+	<p class='body'>sad</p>
 </li>
 
 <li class='comment'>
-	<p class='author'>asd</p>
-	<p class='body'>fsdfd</p>
+	<p class='author'>asdfg</p>
+	<p class='body'>dfg</p>
 </li>
 
 <li class='comment'>
-	<p class='author'>r</p>
-	<p class='body'>werwerewr</p>
+	<p class='author'>asdfg - 08-Dec-2008</p>
+	<p class='body'>dfgh</p>
 </li>
 
 <li class='comment'>
-	<p class='author'>asd</p>
-	<p class='body'>dd</p>
-</li>
-
-<li class='comment'>
-	<p class='author'>asd</p>
-	<p class='body'>fffff</p>
-</li>
-
-<li class='comment'>
-	<p class='author'>asd</p>
-	<p class='body'>dd</p>
-</li>
-
-<li class='comment'>
-	<p class='author'>as</p>
-	<p class='body'>asdasdas</p>
+	<p class='author'><a href='http://fad.de' target='_blank'>Frank</a> - 09-Dec-2008</p>
+	<p class='body'>Loerem Ipsum?<br/><br/>:P</p>
 </li>
 

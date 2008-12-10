@@ -46,7 +46,7 @@ $.fn.easycomments = function(options) {
 		+'<td><input id="comment_author_website" type="text"/></td></tr>'
 		+'<tr valign="top"><td align="right"><label for="comment_body">'+str_commentBody+'&nbsp;'+str_required+'</label></td>'
 		+'<td><textarea id="comment_body" rows="10" cols="40"></textarea></td></tr>'
-		+'<tr><td></td><td><input type="button" id="ec_comment_submit" value="'+str_submitComment+'" /></td></tr>'
+		+'<tr><td></td><td><input type="button" id="ec_comment_submit" value="'+str_submitComment+'" /><img id="ec_loader" src="images/ajax-loader.gif" style="display:none" /></td></tr>'
 		+'</table></div>';
 /*		
 	commentFormHTML = 
@@ -75,6 +75,7 @@ $.fn.easycomments = function(options) {
 		}
 		else{
 			$("#ec_errorMessages").hide();
+			$("#ec_loader").show();
 			submitComment(
 				$("#comment_author").val(), 
 				$("#comment_author_website").val(), 
@@ -108,6 +109,7 @@ function submitComment(author, website, comment){
 		function(data){ 
 			$("#ec_comment_submit").enable();
 			updateCommentList(data);
+			$("#ec_loader").hide();
 		});
 }
 
